@@ -52,6 +52,9 @@
           paths: "auto",
           noData: "暂无内容，请尝试其他关键词",
         },
+        mermaidConfig: {
+          querySelector: ".mermaid",
+        },
       };
     </script>
     <script src="./js/docsify.min.js"></script>
@@ -64,11 +67,7 @@
     <script src="./js/docsify-corner.min.js"></script>
     <script src="./js/progress.min.js"></script>
     <script src="./js/time-updater.min.js"></script>
+    <script src="./js/mermaid.js"></script>
     <script src="./js/docsify-mermaid.js"></script>
-    <script type="module">
-      import mermaid from "./js/mermaid.esm.min.mjs";
-      mermaid.initialize({ startOnLoad: true });
-      window.mermaid = mermaid;
-    </script>
   </body>
 </html>

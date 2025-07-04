@@ -14,14 +14,14 @@
 
   * 下载 JS → 执行页面逻辑
   ```mermaid
-    graph TD
-    A[输入URL] --> B[发送HTTP请求]
-    B --> C[接收HTML、CSS、JavaScript等资源]
-    C --> D[构建DOM树]
-    D --> E[执行JavaScript代码]
-    E --> F[更新DOM或CSSOM]
-    F --> G[构建渲染树]
-    G --> H[绘制页面]
+  graph TD
+    A[Enter URL] --> B[Send HTTP Request]
+    B --> C[Receive HTML, CSS, JavaScript Resources]
+    C --> D[Build DOM Tree]
+    D --> E[Run JavaScript Code]
+    E --> F[Update DOM And CSSOM]
+    F --> G[Construct Render Tree]
+    G --> H[Paint Page]
   ```
 
 * 页面是靠浏览器解析 HTML、CSS、JS 渲染出来的
