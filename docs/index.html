@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover" />
+  <title>BMC WebUI 开发指导</title>
+  <meta name="description" content="An awesome docsify site for publishing some content on the web." />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div>Created by dujx</div>
+    <div>Loading...</div>
+  </div>
+
+  <script>
+    window.$docsify = {
+      name: "皮妈的法克丘",
+      repo: 'true',
+      corner: {
+        url: "https://github.com/dujx99",
+        icon: "github",
+      },
+      auto2top: true,
+      loadSidebar: true,
+      loadNavbar: true,
+      subMaxLevel: 2,
+      previousText: 'Previous',
+      nextText: 'Next',
+      progress: {
+        position: "top",
+        color: "var(--theme-color,#42b983)",
+        height: "3px",
+      },
+      timeUpdater: {
+        text: ">最后更新时间: {docsify-updated}",
+        formatUpdated: "{YYYY}/{MM}/{DD}",
+      },
+      search: {
+        placeholder: "搜索一下",
+        depth: 2,
+        paths: 'auto',
+        noData: '暂无内容，请尝试其他关键词',
+      },
+    };
+  </script>
+  <script src="./js/docsify.min.js"></script>
+  <script src="./js/zoom-image.min.js"></script>
+  <script src="./js/search.js"></script>
+  <script src="./js/docsify-copy-code.min.js"></script>
+  <script src="./js/docsify-pagination.min.js"></script>
+  <script src="./js/countable.js"></script>
+  <script src="./js/pangu.min.js"></script>
+  <script src="./js/docsify-corner.min.js"></script>
+  <script src="./js/progress.min.js"></script>
+  <script src="./js/time-updater.min.js"></script>
+
+</body>
+
+</html>
