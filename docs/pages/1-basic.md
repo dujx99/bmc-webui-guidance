@@ -89,6 +89,24 @@
   │   └─ <article>（另一块内容）
   └─ <footer>（底部）
   ```
+
+### 演示
+
+<code class="live-demo" data-height=250>
+<div class="header">头部</div>
+<div class="main">
+  <div class="sidebar">侧边栏</div>
+  <div class="content">&nbsp;&nbsp;主内容</div>
+</div>
+<div class="footer">底部</div>
+
+<style>
+  .main {
+    display: flex;
+  }
+</style>
+</code>
+
 ---
 
 ## CSS 基本样式与布局

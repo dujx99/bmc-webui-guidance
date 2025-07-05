@@ -207,7 +207,6 @@
 
       if (postTitle) {
         keywords.forEach(function (keyword) {
-          // From https://github.com/sindresorhus/escape-string-regexp
           var regEx = new RegExp(
             escapeHtml(ignoreDiacriticalMarks(keyword)).replace(
               /[|\\{}()[\]^$+*?.]/g,

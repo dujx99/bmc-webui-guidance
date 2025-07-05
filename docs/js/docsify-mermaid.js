@@ -89,7 +89,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   if (entry.length) {
     // Expose entry point to Node, AMD or browser globals
-    // Based on https://github.com/ForbesLindesay/umd/blob/master/template.js
     var mainExports = newRequire(entry[entry.length - 1]);
 
     // CommonJS
