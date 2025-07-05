@@ -4,36 +4,92 @@
 
 > 目标：理解“前端是怎么跑起来的”。
 
-* 浏览器的工作流程：
+- 浏览器的工作流程：
 
-  * 输入网址 → 浏览器发送 HTTP 请求
+  - 输入网址 → 浏览器发送 HTTP 请求
 
-  * 接收 HTML → 渲染页面结构
+  - 接收 HTML → 渲染页面结构
 
-  * 下载 CSS → 渲染页面样式
+  - 下载 CSS → 渲染页面样式
 
-  * 下载 JS → 执行页面逻辑
+  - 下载 JS → 执行页面逻辑
+
   ```mermaid
   graph TD
-    A[Enter URL] --> B[Send HTTP Request]
-    B --> C[Receive HTML, CSS, JavaScript Resources]
-    C --> D[Build DOM Tree]
-    D --> E[Run JavaScript Code]
-    E --> F[Update DOM And CSSOM]
-    F --> G[Construct Render Tree]
-    G --> H[Paint Page]
+  A[Enter URL] --> B[Send HTTP Request]
+  B --> C[Receive HTML, CSS, JavaScript Resources]
+  C --> D[Build DOM Tree]
+  D --> E[Run JavaScript Code]
+  E --> F[Update DOM And CSSOM]
+  F --> G[Construct Render Tree]
+  G --> H[Paint Page]
   ```
 
-* 页面是靠浏览器解析 HTML、CSS、JS 渲染出来的
+- 页面是靠浏览器解析 HTML、CSS、JS 渲染出来的
 
-* DOM（页面结构） + CSSOM（样式结构）组成最终页面
+- DOM（页面结构） + CSSOM（样式结构）组成最终页面
 
-* 前端负责“显示”和“交互”，后端负责“数据”
+- 前端负责“显示”和“交互”，后端负责“数据”
 
 ---
 
 ## HTML 基础结构
 
+> 目标：认识常用标签及它们的属性，看懂页面结构。
+
+### 常见标签
+
+  | 标签             | 用途 / 场景                    | 特点 / 备注                            |
+  | ---------------- | ------------------------------ | -------------------------------------- |
+  | `<div>`          | 区块容器，布局、分组           | 最常用标签，无语义，仅用于分组、布局   |
+  | `<span>`         | 行内容器，包裹文字、小图标     | 常用于局部文字样式调整、图标容器       |
+  | `<p>`            | 段落文本                       | 会自动换行，上下有间距                 |
+  | `<h1>` \~ `<h6>` | 标题（从大到小）               | SEO 友好、结构清晰，常用于页面标题     |
+  | `<a>`            | 超链接，跳转页面或下载文件     | 有 `href` 属性，通常配合按钮样式使用   |
+  | `<button>`       | 按钮，触发事件                 | 可点击，通常配合 JS 事件使用           |
+  | `<input>`        | 输入框，单行文本、密码、数字等 | 有多种类型（text、password、number）   |
+  | `<textarea>`     | 多行文本输入框                 | 用于较长的文本输入                     |
+  | `<img>`          | 图片展示                       | 有 `src` 属性，需指定图片地址          |
+  | `<ul>` / `<ol>`  | 列表容器（无序 / 有序）        | `ul` 常用于菜单、导航，`ol` 有数字序号 |
+  | `<li>`           | 列表项，放在 `ul` / `ol` 里    | 配合 `ul`、`ol` 使用，表示每一项       |
+  | `<form>`         | 表单容器，提交数据             | 包含输入项、按钮，配合接口提交         |
+  | `<label>`        | 表单项标签                     | 常与 `input` 搭配，提升可用性          |
+  | `<select>`       | 下拉选择框                     | 用于单选、多选选项选择                 |
+  | `<option>`       | 下拉框中的选项                 | 必须放在 `<select>` 内部               |
+
+### 常用属性
+
+  | 属性      | 常见用途    | 简单示例                     |
+  | ------- | ------- | ------------------------ |
+  | `id`    | 唯一标识、定位 | `<div id="header">`      |
+  | `class` | 分组、样式   | `<div class="menu">`     |
+  | `href`  | 链接地址    | `<a href="#">`           |
+  | `src`   | 资源路径    | `<img src="logo.png">`   |
+  | `alt`   | 图片替代文本  | `<img alt="Logo">`       |
+  | `title` | 提示信息    | `<button title="提交">`    |
+  | `style` | 临时样式    | `<p style="color:red;">` |
+
+### 页面结构布局的层级嵌套关系
+
+- HTML 层级关系
+
+  - 页面上所有内容，都是“盒子套盒子”
+
+  - 每个标签就是“一个盒子”
+
+  - 标签可以互相嵌套，形成 **父子关系**
+
+- 三段式布局
+
+  ```
+  <body>
+  ├─ <header>（头部）
+  ├─ <main>（主体内容）
+  │   ├─ <section>（某一块内容）
+  │   │   └─ <p>文字</p>
+  │   └─ <article>（另一块内容）
+  └─ <footer>（底部）
+  ```
 ---
 
 ## CSS 基本样式与布局
