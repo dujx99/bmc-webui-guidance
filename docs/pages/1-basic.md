@@ -66,6 +66,7 @@
   | `alt`   | 图片替代文本  | `<img alt="Logo">`       |
   | `title` | 提示信息    | `<button title="提交">`    |
   | `style` | 临时样式    | `<p style="color:red;">` |
+  | `type` | 输入框或按钮类型    | `<input type="text">`（文本框）<br>`<input type="password">`（密码框） |
 
 ### 页面结构布局的层级嵌套关系
 
